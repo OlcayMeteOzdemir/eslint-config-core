@@ -1,0 +1,22 @@
+{
+	"name": "@meteozdemir/eslint-config-core",
+	"version": "1.0.0",
+	"description": "Custom ESlint settings as an extensible shared config.",
+	"main": "index.js",
+	"scripts": {},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/OlcayMeteOzdemir/eslint-config-core.git"
+	},
+	"keywords": [
+		"javascript",
+		"vanilla",
+		"eslint",
+		"eslint-config"
+	],
+	"author": "Olcay Mete Ozdemir",
+	"license": "MIT",
+	"homepage": "https://github.com/OlcayMeteOzdemir/eslint-config-core#readme",
+	"devDependencies": {},
+	"peerDependencies": {}
+}
