@@ -3,6 +3,7 @@ module.exports = {
 		'./rules/core/possible-problems',
 		'./rules/core/suggestions',
 		'./rules/core/layout-and-formatting',
+		'./rules/import',
 	],
 	env: {
 		es6: true,
