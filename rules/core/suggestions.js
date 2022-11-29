@@ -324,6 +324,7 @@ module.exports = {
 				ignore: [],
 				ignoreArrayIndexes: true,
 				ignoreDefaultValues: true,
+				ignoreClassFieldInitialValues: false,
 				enforceConst: true,
 				detectObjects: false,
 			},
