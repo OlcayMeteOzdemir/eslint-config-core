@@ -247,6 +247,7 @@ module.exports = {
 				enforceForSequenceExpressions: false,
 				enforceForNewInMemberExpressions: false,
 				enforceForFunctionPrototypeMethods: false,
+				allowParensAfterCommentPattern: '',
 			},
 		],
 		'no-mixed-spaces-and-tabs': 'error',
