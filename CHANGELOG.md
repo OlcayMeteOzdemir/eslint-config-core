@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.2.1 - December 16, 2022
+
+  - Fixed: Post install script changed for support ES Module
+
 ## v1.2.0 - December 6, 2022
 
   - Updated: ESlint 8.28.0 to 8.29.0
