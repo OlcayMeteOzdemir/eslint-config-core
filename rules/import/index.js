@@ -11,74 +11,9 @@ module.exports = {
 		'import/ignore': ['node_modules', '\\.(coffee|scss|css|less|hbs|svg|json)$'],
 	},
 	rules: {
-		'import/no-unresolved': [
-			'error',
-			{
-				commonjs: true,
-				amd: false,
-				caseSensitive: true,
-				caseSensitiveStrict: false,
-			},
-		],
-		'import/named': 'error',
-		'import/default': 'off',
-		'import/namespace': [
-			'off',
-			{
-				allowComputed: false,
-			},
-		],
-		'import/no-restricted-paths': [
-			'off',
-			{
-				zones: [
-					{
-						target: '',
-						from: '',
-						except: [],
-						message: '',
-					},
-				],
-			},
-		],
-		'import/no-absolute-path': [
-			'error',
-			{
-				esmodule: true,
-				commonjs: true,
-				amd: false,
-			},
-		],
-		'import/no-dynamic-require': 'error',
-		'import/no-internal-modules': [
-			'off',
-			{
-				allow: [],
-				forbid: [],
-			},
-		],
-		'import/no-webpack-loader-syntax': 'error',
-		'import/no-self-import': 'error',
-		'import/no-cycle': [
-			'error',
-			{
-				maxDepth: Infinity,
-				ignoreExternal: false,
-			},
-		],
-		'import/no-useless-path-segments': [
-			'error',
-			{
-				commonjs: true,
-				noUselessIndex: false,
-			},
-		],
-		'import/no-relative-parent-imports': 'off',
-		'import/no-relative-packages': 'error',
 		'import/export': 'error',
-		'import/no-named-as-default': 'error',
-		'import/no-named-as-default-member': 'error',
 		'import/no-deprecated': 'off',
+		'import/no-empty-named-blocks': 'error',
 		'import/no-extraneous-dependencies': [
 			'error',
 			{
@@ -112,6 +47,8 @@ module.exports = {
 			},
 		],
 		'import/no-mutable-exports': 'error',
+		'import/no-named-as-default': 'error',
+		'import/no-named-as-default-member': 'error',
 		'import/no-unused-modules': [
 			'off',
 			{
@@ -120,7 +57,7 @@ module.exports = {
 				ignoreExports: [],
 			},
 		],
-		'import/unambiguous': 'off',
+		'import/no-amd': 'error',
 		'import/no-commonjs': [
 			'off',
 			{
@@ -129,28 +66,93 @@ module.exports = {
 				allowPrimitiveModules: false,
 			},
 		],
-		'import/no-amd': 'error',
-		'import/no-nodejs-modules': [
-			'off',
-			{
-				allow: [],
-			},
-		],
 		'import/no-import-module-exports': [
 			'error',
 			{
 				exceptions: [],
 			},
 		],
-		'import/first': 'error',
-		'import/exports-last': 'error',
-		'import/no-duplicates': 'error',
-		'import/no-namespace': [
+		'import/no-nodejs-modules': [
 			'off',
 			{
-				ignore: [],
+				allow: [],
 			},
 		],
+		'import/unambiguous': 'off',
+		'import/default': 'off',
+		'import/named': 'error',
+		'import/namespace': [
+			'off',
+			{
+				allowComputed: false,
+			},
+		],
+		'import/no-absolute-path': [
+			'error',
+			{
+				esmodule: true,
+				commonjs: true,
+				amd: false,
+			},
+		],
+		'import/no-cycle': [
+			'error',
+			{
+				maxDepth: Infinity,
+				ignoreExternal: false,
+				allowUnsafeDynamicCyclicDependency: false,
+			},
+		],
+		'import/no-dynamic-require': 'error',
+		'import/no-internal-modules': [
+			'off',
+			{
+				allow: [],
+				forbid: [],
+			},
+		],
+		'import/no-relative-packages': 'error',
+		'import/no-relative-parent-imports': 'off',
+		'import/no-restricted-paths': [
+			'off',
+			{
+				zones: [
+					{
+						target: '',
+						from: '',
+						except: [],
+						message: '',
+					},
+				],
+			},
+		],
+		'import/no-self-import': 'error',
+		'import/no-unresolved': [
+			'error',
+			{
+				commonjs: true,
+				amd: false,
+				caseSensitive: true,
+				caseSensitiveStrict: false,
+			},
+		],
+		'import/no-useless-path-segments': [
+			'error',
+			{
+				commonjs: true,
+				noUselessIndex: false,
+			},
+		],
+		'import/no-webpack-loader-syntax': 'error',
+		'import/consistent-type-specifier-style': ['off', 'prefer-inline'],
+		'import/dynamic-import-chunkname': [
+			'off',
+			{
+				importFunctions: [],
+				webpackChunknameFormat: '[0-9a-zA-Z-_/.]+',
+			},
+		],
+		'import/exports-last': 'error',
 		'import/extensions': [
 			'error',
 			'ignorePackages',
@@ -160,25 +162,8 @@ module.exports = {
 				mjs: 'never',
 			},
 		],
-		'import/order': [
-			'error',
-			{
-				'groups': [['builtin', 'external', 'internal']],
-				'newlines-between': 'ignore',
-				'alphabetize': {
-					order: 'ignore',
-					caseInsensitive: false,
-				},
-				'warnOnUnassignedImports': false,
-			},
-		],
-		'import/newline-after-import': [
-			'error',
-			{
-				count: 1,
-			},
-		],
-		'import/prefer-default-export': 'error',
+		'import/first': 'error',
+		'import/group-exports': 'off',
 		'import/max-dependencies': [
 			'off',
 			{
@@ -186,15 +171,13 @@ module.exports = {
 				ignoreTypeImports: false,
 			},
 		],
-		'import/no-unassigned-import': [
-			'off',
+		'import/newline-after-import': [
+			'error',
 			{
-				allow: [],
+				count: 1,
+				considerComments: true,
 			},
 		],
-		'import/no-named-default': 'error',
-		'import/no-default-export': 'off',
-		'import/no-named-export': 'off',
 		'import/no-anonymous-default-export': [
 			'off',
 			{
@@ -208,13 +191,35 @@ module.exports = {
 				allowObject: false,
 			},
 		],
-		'import/group-exports': 'off',
-		'import/dynamic-import-chunkname': [
+		'import/no-default-export': 'off',
+		'import/no-duplicates': 'error',
+		'import/no-named-default': 'error',
+		'import/no-named-export': 'off',
+		'import/no-namespace': [
 			'off',
 			{
-				importFunctions: [],
-				webpackChunknameFormat: '[0-9a-zA-Z-_/.]+',
+				ignore: [],
 			},
 		],
+		'import/no-unassigned-import': [
+			'off',
+			{
+				allow: [],
+			},
+		],
+		'import/order': [
+			'error',
+			{
+				'groups': [['builtin', 'external', 'internal']],
+				'newlines-between': 'ignore',
+				'alphabetize': {
+					order: 'ignore',
+					orderImportKind: 'ignore',
+					caseInsensitive: false,
+				},
+				'warnOnUnassignedImports': false,
+			},
+		],
+		'import/prefer-default-export': 'error',
 	},
 };
