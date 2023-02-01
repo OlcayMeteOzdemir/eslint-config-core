@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.3.3 - February 1, 2023
+
+  - Updated: ESlint 8.31.0 to 8.33.0
+  - Updated: eslint-plugin-import 2.27.4 to 2.27.5
+
 ## v1.3.2 - January 12, 2023
 
   - Updated: eslint-plugin-import 2.26.0 to 2.27.4
