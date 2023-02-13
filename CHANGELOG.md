@@ -1,8 +1,12 @@
 # Changelog
 
+## v1.3.4 - February 13, 2023
+
+  - Updated: eslint 8.33.0 to 8.34.0
+
 ## v1.3.3 - February 1, 2023
 
-  - Updated: ESlint 8.31.0 to 8.33.0
+  - Updated: eslint 8.31.0 to 8.33.0
   - Updated: eslint-plugin-import 2.27.4 to 2.27.5
 
 ## v1.3.2 - January 12, 2023
@@ -17,7 +21,7 @@
 
 ## v1.2.2 - January 3, 2023
 
-  - Updated: ESlint 8.29.0 to 8.31.0
+  - Updated: eslint 8.29.0 to 8.31.0
   - Changed: Some code examples changed from `README.md`
 
 ## v1.2.1 - December 16, 2022
@@ -26,12 +30,12 @@
 
 ## v1.2.0 - December 6, 2022
 
-  - Updated: ESlint 8.28.0 to 8.29.0
+  - Updated: eslint 8.28.0 to 8.29.0
   - Added: `allowParensAfterCommentPattern` option to `no-extra-parens`
 
 ## v1.1.0 - November 29, 2022
 
-  - Updated: ESlint 8.27.0 to 8.28.0
+  - Updated: eslint 8.27.0 to 8.28.0
   - Added: `ignoreClassFieldInitialValues` option to `no-magic-numbers`
 
 ## v1.0.0 - November 9, 2022
